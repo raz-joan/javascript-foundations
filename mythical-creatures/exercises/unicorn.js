@@ -7,6 +7,14 @@ class Unicorn {
       this.color = 'white';
     }
   }
+
+  isWhite() {
+    if (this.color === 'white') {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
 module.exports = Unicorn;
