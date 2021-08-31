@@ -47,13 +47,13 @@ describe('Vampire', function() {
     assert.equal(vampire.thirsty, false);
   });
 
-  it.skip('should be start with no ounces of blood drank', function() {
+  it('should be start with no ounces of blood drank', function() {
     var vampire = new Vampire('Bobby');
 
     assert.equal(vampire.ouncesDrank, 0);
   });
 
-  it.skip('should drink 10 ounces of blood at a time', function() {
+  it('should drink 10 ounces of blood at a time', function() {
     var vampire = new Vampire('Margot');
 
     vampire.drink();
@@ -63,7 +63,7 @@ describe('Vampire', function() {
     assert.equal(vampire.ouncesDrank, 30);
   });
 
-  it.skip('should be full after drinking 50 ounces', function() {
+  it('should be full after drinking 50 ounces', function() {
     var vampire = new Vampire('Javi');
 
     vampire.drink();
