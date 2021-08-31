@@ -6,6 +6,11 @@ class Vampire {
     } else {
       this.pet = 'bat';
     }
+    this.thirsty = true;
+  }
+
+  drink() {
+    this.thirsty = false;
   }
 }
 
