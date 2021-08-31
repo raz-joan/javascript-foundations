@@ -1,7 +1,11 @@
 class Unicorn {
   constructor(name, color) {
     this.name = name;
-    this.color = color;
+    if (color) {
+      this.color = color;
+    } else {
+      this.color = 'white';
+    }
   }
 }
 
