@@ -21,7 +21,7 @@ describe('Hobbit', function() {
     assert.equal(bilbo.age, 0);
   });
 
-  it.skip('should gain 1 year after every birthday', function() {
+  it('should gain 1 year after every birthday', function() {
     var hobbit = new Hobbit({ name: 'Meriadoc' });
 
     hobbit.celebrateBirthday();
@@ -37,7 +37,7 @@ describe('Hobbit', function() {
     };
   };
 
-  it.skip('should be considered a child at the age of 32', function() {
+  it('should be considered a child at the age of 32', function() {
     var hobbit = new Hobbit({ name: 'Taylor' });
 
     timeTravel(32, hobbit);
@@ -46,11 +46,11 @@ describe('Hobbit', function() {
     assert.equal(hobbit.adult, false);
   });
 
-  it.skip('should be considered an adult at 33', function() {
+  it('should be considered an adult at 33', function() {
     var hobbit = new Hobbit({ name: 'Taylor' });
 
     timeTravel(33, hobbit);
-
+    
     assert.equal(hobbit.age, 33);
     assert.equal(hobbit.adult, true);
   });
