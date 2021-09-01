@@ -3,11 +3,11 @@ var Hobbit = require('../exercises/hobbit');
 
 describe('Hobbit', function() {
 
-  it.skip('should be a function', function() {
+  it('should be a function', function() {
     assert.isFunction(Hobbit);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var bilbo = new Hobbit({ name: 'Bilbo' });
     var mark = new Hobbit({ name: 'Mark' });
 
@@ -15,7 +15,7 @@ describe('Hobbit', function() {
     assert.equal(mark.name, 'Mark');
   });
 
-  it.skip('should start out 0 years old', function() {
+  it('should start out 0 years old', function() {
     var bilbo = new Hobbit({ name: 'Bilbo' });
 
     assert.equal(bilbo.age, 0);
