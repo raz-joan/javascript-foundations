@@ -3,7 +3,7 @@ var Pirate = require('../exercises/pirate');
 
 describe('Pirate', function() {
 
-  it.skip('should instantiate our good friend, Pirate', function() {
+  it('should instantiate our good friend, Pirate', function() {
     var dreadPirateRoberts = new Pirate();
 
     assert.instanceOf(dreadPirateRoberts, Pirate);
