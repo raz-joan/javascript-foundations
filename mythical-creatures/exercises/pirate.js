@@ -22,6 +22,14 @@ class Pirate {
       return "ARG! I've been cursed!";
     }
   }
+
+    liftCurse() {
+      if (this.booty >= 300) {
+        this.booty -= 300;
+        this.cursed = false;
+        return "Your curse has been lifted!";
+      }
+    }
 }
 
 module.exports = Pirate;
