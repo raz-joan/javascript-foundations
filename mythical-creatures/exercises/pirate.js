@@ -6,7 +6,8 @@ class Pirate {
     } else {
       this.job = 'scallywag';
     }
-  }  
+    this.cursed = false;
+  }
 }
 
 module.exports = Pirate;
