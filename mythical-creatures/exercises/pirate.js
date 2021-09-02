@@ -1,8 +1,12 @@
 class Pirate {
-  constructor(name) {
+  constructor(name, job) {
     this.name = name;
-    this.job = 'scallywag';
-  }
+    if (job) {
+      this.job = job;
+    } else {
+      this.job = 'scallywag';
+    }
+  }  
 }
 
 module.exports = Pirate;
