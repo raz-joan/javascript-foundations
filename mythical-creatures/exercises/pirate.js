@@ -7,6 +7,7 @@ class Pirate {
       this.job = 'scallywag';
     }
     this.cursed = false;
+    this.booty = 0;
   }
 
   robShip() {
