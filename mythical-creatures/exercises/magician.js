@@ -8,6 +8,10 @@ class Magician {
       this.favoriteAccessory = 'top hat';
     }
   }
+
+  performIncantation(spell) {
+    return spell.toUpperCase() + "!";
+  }
 }
 
 module.exports = Magician;
