@@ -7,6 +7,7 @@ class Magician {
     } else {
       this.favoriteAccessory = 'top hat';
     }
+    this.confidencePercentage = 10;
   }
 
   performIncantation(spell) {
@@ -14,6 +15,7 @@ class Magician {
   }
 
   performTrick() {
+    this.confidencePercentage += 10;  
     if (this.favoriteAccessory === 'top hat') {
       return 'PULL RABBIT FROM TOP HAT';
     } else {
