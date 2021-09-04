@@ -10,6 +10,9 @@ class Medusa {
     var statue = new Statue(victim.name);
     if (this.statues.length < 3) {
       this.statues.push(statue);
+    } else {
+      this.statues.shift();
+      this.statues.push(statue);
     }
   }
 }
