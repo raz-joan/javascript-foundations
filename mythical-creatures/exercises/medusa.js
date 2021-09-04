@@ -5,6 +5,11 @@ class Medusa {
     this.name = name;
     this.statues = [];
   }
+
+  gazeAtVictim(victim) {
+    var statue = new Statue(victim.name);
+    this.statues.push(statue);
+  }
 }
 
 module.exports = Medusa;
