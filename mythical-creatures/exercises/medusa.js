@@ -8,7 +8,9 @@ class Medusa {
 
   gazeAtVictim(victim) {
     var statue = new Statue(victim.name);
-    this.statues.push(statue);
+    if (this.statues.length < 3) {
+      this.statues.push(statue);
+    }
   }
 }
 
