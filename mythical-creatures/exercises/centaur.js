@@ -4,11 +4,20 @@ class Centaur {
     this.breed = name.type;
     this.cranky = false;
     this.standing = true;
+    this.moodMeter = 0;
   }
   shootBow() {
+    this.moodMeter++;
+    if (this.moodMeter = 3) {
+      this.cranky = true;
+    }
     return "Twang!!!";
   }
   run() {
+    this.moodMeter++;
+    if (this.moodMeter = 3) {
+      this.cranky = true;
+    }
     return 'Clop clop clop clop!!!';
   }
 }
