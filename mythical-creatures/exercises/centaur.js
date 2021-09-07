@@ -8,17 +8,21 @@ class Centaur {
   }
   shootBow() {
     this.moodMeter++;
-    if (this.moodMeter = 3) {
+    if (this.moodMeter >= 3) {
       this.cranky = true;
+      return 'NO!';
+    } else {
+      return "Twang!!!";
     }
-    return "Twang!!!";
   }
   run() {
     this.moodMeter++;
-    if (this.moodMeter = 3) {
+    if (this.moodMeter >= 3) {
       this.cranky = true;
+      return 'NO!';
+    } else {
+      return 'Clop clop clop clop!!!';
     }
-    return 'Clop clop clop clop!!!';
   }
 }
 
