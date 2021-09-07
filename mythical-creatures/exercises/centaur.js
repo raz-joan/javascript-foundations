@@ -35,6 +35,8 @@ class Centaur {
     if (this.standing) {
       return 'NO!';
     } else {
+      this.cranky = false;
+      this.moodMeter = 0;
       return "ZZZZ";
     }
   }
@@ -45,6 +47,13 @@ class Centaur {
   standUp() {
     this.standing = true;
     this.layingDown = false;
+  }
+  drinkPotion() {
+    if (this.layingDown) {
+      return "Not while I'm laying down!";
+    } else {
+      this.cranky = false;
+    }
   }
 }
 
