@@ -1,5 +1,6 @@
 var assert = require('chai').assert;
-var Dragon = require('../exercises/dragon');
+// var Dragon = require('../exercises/dragon');
+var Dragon = require('../exercises/dragonTwo');
 
 describe('Dragon', function() {
 
