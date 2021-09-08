@@ -1,5 +1,6 @@
 var assert = require('chai').assert;
-var Hobbit = require('../exercises/hobbit');
+// var Hobbit = require('../exercises/hobbit');
+var Hobbit = require('../exercises/hobbitTwo')
 
 describe('Hobbit', function() {
 
