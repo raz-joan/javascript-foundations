@@ -7,10 +7,20 @@ class Ogre {
 
   encounter(person) {
     person.encounterCounter++;
+    if (person.encounterCounter && !(person.encounterCounter % 3)) {
+      this.swingAt();
+    }
+    if (person.encounterCounter && !(person.encounterCounter % 2)) {
+      person.knockedOut = true;
+    }
   }
 
   swingAt(person) {
     this.swings++;
+  }
+
+  apologize(person) {
+    person.knockedOut = false;
   }
 }
 
