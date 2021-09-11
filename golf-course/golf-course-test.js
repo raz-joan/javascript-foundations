@@ -1,6 +1,6 @@
 var assert = require('chai').assert;
 var GolfCourse = require('./golf-course.js');
-var Golfer = require('./golfer.js')
+var Golfer = require('./golfer.js');
 
 describe('Golf Course', function () {
   it('should have a name and difficulty', function () {
@@ -61,12 +61,12 @@ describe('Golf Course', function () {
     var successfulCheckIn = golfCourse.checkInGroup(group1);
     assert.equal(golfCourse.openings, 1);
     assert.deepEqual(golfCourse.currentlyPlaying, ['Kevin', 'Ted', 'Pat']);
-    assert.equal(successfulCheckIn, 'You\'re checked in. Have fun!')
+    assert.equal(golfCourse.successfulCheckIn, 'You\'re checked in. Have fun!')
 
     var deniedCheckIn = golfCourse.checkInGroup(group2);
     assert.equal(golfCourse.openings, 1);
     assert.deepEqual(golfCourse.currentlyPlaying, ['Kevin', 'Ted', 'Pat']);
-    assert.equal(deniedCheckIn, 'Sorry, we are currently booked! Please come back later.')
+    assert.equal(golfCourse.deniedCheckIn, 'Sorry, we are currently booked! Please come back later.')
   });
 
 });
@@ -80,7 +80,7 @@ describe('Golfer', function () {
     assert.equal(golfer.handicap, 21);
   });
 
-  it('should start out minimally frustrated', function () {
+  it ('should start out minimally frustrated', function () {
     var golfer = new Golfer({ name: 'Ryan', handicap: 19 });
     assert.equal(golfer.name, 'Ryan');
     assert.equal(golfer.frustration, 0);
