@@ -48,6 +48,7 @@ describe('Ogre', () => {
     assert.equal(human.noticesOgre(), false);
 
     ogre.encounter(human);
+
     assert.equal(human.noticesOgre(), true);
   });
 
