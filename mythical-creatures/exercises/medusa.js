@@ -1,21 +1,24 @@
-var Person = require('./person');
-var Statue = require('./statue');
+var Statue = require('../exercises/statue');
+var Person = require('../exercises/person');
+
 class Medusa {
-  constructor (name) {
+  constructor(name) {
     this.name = name;
     this.statues = [];
   }
 
-  gazeAtVictim(victim) {
-    var statue = new Statue(victim.name);
+  gazeAtVictim(person) {
     if (this.statues.length < 3) {
+      var statue = new Statue(person.name)
       this.statues.push(statue);
-    } else {
-      var person = new Person(this.statues[0].name);
-      person.mood = 'relieved';
+    } else if (this.statues.length === 3) {
+      var freedStatue = this.statues[0];
       this.statues.shift();
+      var statue = new Statue(person.name)
       this.statues.push(statue);
-      return person;
+      var freedPerson = new Person(freedStatue.name);
+      freedPerson.mood = 'relieved';
+      return freedPerson;
     }
   }
 }
