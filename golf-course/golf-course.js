@@ -1,12 +1,12 @@
 class GolfCourse {
-  constructor(courseName, courseDifficulty, openTimes, courseFeatures) {
-    this.name = courseName;
-    this.difficulty = courseDifficulty;
-    this.openings = openTimes;
-    this.features = courseFeatures;
+  constructor(name, difficulty, openings, features) {
+    this.name = name;
+    this.difficulty = difficulty;
+    this.openings = openings;
+    this.features = features;
     this.currentlyPlaying = [];
-    this.successfulCheckIn = "";
-    this.deniedCheckIn = "";
+    this.successfulCheckIn = "You're checked in. Have fun!";
+    this.deniedCheckIn = 'Sorry, we are currently booked! Please come back later.';
   }
 
   checkInGroup(group) {
@@ -15,12 +15,8 @@ class GolfCourse {
       for (var i = 0; i < group.length; i++) {
         this.currentlyPlaying.unshift(group[i].name);
       }
-      this.successfulCheckIn = "You're checked in. Have fun!";
-    } else {
-      this.deniedCheckIn = "Sorry, we are currently booked! Please come back later.";
     }
   }
-
 }
 
 

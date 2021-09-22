@@ -1,20 +1,20 @@
 class Golfer {
-  constructor(person) {
-    this.name = person.name;
-    this.handicap = person.handicap;
+  constructor(golfer) {
+    this.name = golfer.name;
+    this.handicap = golfer.handicap;
     this.frustration = 0;
     this.confidence = 0;
   }
 
   calculateAvg(par) {
-    return `I usually shoot a ${par + this.handicap} on average.`;
+    return `I usually shoot a ${this.handicap + par} on average.`;
   }
 
-  playRound(course) {
-    if (course.difficulty === 'moderate') {
-      this.frustration = 100;
-    } else if (course.difficulty === 'hard') {
-      this.frustration = 500;
+  playRound(golfCourse) {
+    if (golfCourse.difficulty === 'moderate') {
+      this.frustration += 100;
+    } else if (golfCourse.difficulty === 'hard') {
+      this.frustration += 500;
     }
   }
 
@@ -22,20 +22,20 @@ class Golfer {
     this.confidence += 10;
   }
 
-  marvel(course) {
-    return `I love the ${course.features[0]} and ${course.features[1]} on this course!`
+  marvel(golfCourse) {
+    return `I love the ${golfCourse.features[0]} and ${golfCourse.features[1]} on this course!`;
   }
 
   whatYaShoot(score) {
-    if (score < 0) {
-      this.frustration = 0;
-      return "I AM THE GREATEST GOLFER ALIVE!";
+    if (score > 0) {
+      this.frustration += 20;
+      return 'Doh!';
     } else if (score === 0) {
       this.frustration -= 10;
-      return "Booyah!";
-    } else if (score > 0) {
-      this.frustration += 20;
-      return "Doh!";
+      return 'Booyah!';
+    } else if (score < 0) {
+      this.frustration = 0;
+      return 'I AM THE GREATEST GOLFER ALIVE!';
     }
   }
 }

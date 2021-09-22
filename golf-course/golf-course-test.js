@@ -80,7 +80,7 @@ describe('Golfer', function () {
     assert.equal(golfer.handicap, 21);
   });
 
-  it ('should start out minimally frustrated', function () {
+  it('should start out minimally frustrated', function () {
     var golfer = new Golfer({ name: 'Ryan', handicap: 19 });
     assert.equal(golfer.name, 'Ryan');
     assert.equal(golfer.frustration, 0);
