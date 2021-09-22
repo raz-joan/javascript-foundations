@@ -1,6 +1,6 @@
 class Candy {
-  constructor(candy) {
-    this.type = candy;
+  constructor(candyType) {
+    this.type = candyType;
   }
 }
 

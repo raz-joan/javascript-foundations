@@ -6,16 +6,15 @@ class TrickOrTreater {
     this.countCandies = 0;
   }
 
-  putCandyInBag(candy) {
-    this.bag.fill(candy);
+  putCandyInBag(candyItem) {
     this.hasCandy = true;
-    this.countCandies = this.bag.count;
+    this.bag.fill(candyItem);
+    this.countCandies++;
   }
 
   eat() {
+    this.countCandies--;
     this.bag.candies.pop();
-    this.bag.count = this.bag.candies.length;
-    this.countCandies = this.bag.count;
   }
 }
 

@@ -5,19 +5,18 @@ class Bag {
     this.candies = [];
   }
 
-  fill(candy) {
-    this.candies.push(candy);
+  fill(newCandy) {
+    this.candies.push(newCandy);
     this.count = this.candies.length;
   }
 
-  contains(candy) {
+  contains(candyName) {
     for (var i = 0; i < this.candies.length; i++) {
-      if (candy === this.candies[i].type) {
+      if (candyName === this.candies[i].type) {
         return true;
-      } else {
-        return false;
       }
     }
+    return false;
   }
 }
 
