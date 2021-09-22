@@ -7,9 +7,9 @@ class Runner {
     this.completedRaces = [];
   }
 
-  runSomeMiles(number) {
-    this.milesRun += number;
-    this.fitness += number;
+  runSomeMiles(miles) {
+    this.milesRun += miles;
+    this.fitness += miles;
   }
 
   stretch() {

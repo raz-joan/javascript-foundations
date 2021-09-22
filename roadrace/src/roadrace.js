@@ -6,13 +6,13 @@ class Roadrace {
     this.participants = [];
   }
 
-  setDistance(number) {
-    this.distance += number;
-    return `The ${this.name} in ${this.location} is a ${this.distance} mile race.`;
+  setDistance(distance) {
+    this.distance = distance;
+    return `The ${this.name} in ${this.location} is a ${distance} mile race.`;
   }
 
-  registerParticipants(runner) {
-    this.participants.push(runner);
+  registerParticipants(racer) {
+    this.participants.push(racer);
   }
 
   completeRace() {
