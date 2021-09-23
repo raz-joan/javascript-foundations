@@ -10,21 +10,20 @@ class Werewolf {
       this.form = 'wolf';
       this.hungry = true;
       return 'Aaa-Woooo!';
-    } else {
+    } else if (this.form === 'wolf') {
       this.form = 'human';
       this.hungry = false;
-      return 'Where are I?'
+      return "Where are I?";
     }
   }
 
-  eatVictim(victim) {
-    if (this.form === 'wolf') {
-      victim.alive = false;
-      this.form = 'human';
-      return `Yum, ${victim.name} was delicious.`;
-    } else {
-      return `No way am I eating ${victim.name}, I'd like a burger!`;
+  eatVictim(humanVictim) {
+    if (this.form === 'human') {
+      return `No way am I eating ${humanVictim.name}, I'd like a burger!`;
     }
+    humanVictim.alive = false;
+    this.form = 'human';
+    return `Yum, ${humanVictim.name} was delicious.`;
   }
 }
 
